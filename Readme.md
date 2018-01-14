@@ -1,6 +1,6 @@
 # node-drives (work in progress)
 
-List and get details of all drives in your system. This module doesn't require any native compilation but depends on the builtin commands on each operating system.
+List and get details of external drives in your system. This module doesn't require any native compilation but depends on the builtin commands on each operating system.
 
 Platforms Supported:
 
@@ -18,31 +18,22 @@ To install the most recent release from npm, run:
 
 The source code is available at [github](http://github.com/oransel/node-drives). You can either clone the repository or download a zip file of the latest release.
 
-Once you have the source, you can build the module by running
-
-	npm install
-
-in the main directory. If everything goes well, the module will be available in the build/Release folder.
-
 ## Examples
 
 Drives is very simple to use.
-<!-- 
-``` js
-// load the module and display its version
-var talib = require('./build/Release/talib');
-console.log("TALib Version: " + talib.version);
 
-// Display all available indicator function names
-var functions = talib.functions;
-for (i in functions) {
-	console.log(functions[i].name);
-}
-``` -->
+``` js
+const drives = require('drives');
+
+drives.get((error, drives) => {
+	if (error) return console.dir(error);
+	console.dir(drives);
+});
+```
 
 For working examples look in the `examples/` directory. You can execute the examples using node.
 
-	node examples/list.js
+	node examples/all.js
 
 ## License
 
