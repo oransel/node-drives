@@ -1,6 +1,6 @@
 # node-drives (work in progress)
 
-List and get details of external drives in your system. This module doesn't require any native compilation but depends on the builtin commands on each operating system.
+List and get details of drives in your system. This module doesn't require any native compilation but depends on the builtin commands on each operating system.
 
 Platforms Supported:
 

@@ -1,15 +1,33 @@
 {
+  "author": "Mustafa Oransel",
   "name": "drives",
   "version": "1.0.0",
-  "description": "",
+  "description": "A module to list and get details of drives in your system",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "https://github.com/oransel/node-drives",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oransel/node-drives.git"
   },
-  "author": "",
-  "license": "ISC",
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "scripts": {
+    "example": "node ./examples/all.js"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "dependencies": {
     "async": "^2.6.0",
     "fast-plist": "^0.1.2"
-  }
+  },
+  "licenses": [
+    {
+      "type": "LGPL License",
+      "url": "http://www.gnu.org/licenses/lgpl.html"
+    }
+  ]
 }
