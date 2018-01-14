@@ -5,15 +5,14 @@ const linux = require('./lib/linux.js');
 const os = require('os');
 
 
-// module.exports = () => {
+module.exports = (() => {
 
-// 	os.platform();
-
-// };
-
-macos.get((error, drives) => {
-	console.dir(drives);
-});
-
-const volumes = macos.sync();
-// console.log(volumes);
+	// export per supported platform
+	switch(os.platform()) {
+		case 'darwin': return macos;
+		case 'win32': return windows;
+		case 'linux': return linux;
+		default: throw new Error('unsupported platform os');
+	}
+	
+})();
